@@ -78,7 +78,8 @@ public class PaginationAndSortingTest {
         String sortByDesc = "description";
         String sortDir = "desc";
 
-        Sort sortByName = Sort.by(sortBy).descending();
+        Sort sortByName = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())?
+                Sort.by(sortBy).ascending(): Sort.by(sortBy).descending();
 
         Sort sortByDescription = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())?
                 Sort.by(sortByDesc).ascending(): Sort.by(sortByDesc).descending();
