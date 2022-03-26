@@ -18,7 +18,7 @@ class ProductRepositoryTest {
     private ProductRepository productRepository;
 
     @Test
-    void saveMethod() {
+    void saveMethod(){
         // create product
         Product product = new Product();
         product.setName("product 1");
@@ -36,6 +36,7 @@ class ProductRepositoryTest {
         System.out.println(savedObject.toString());
 
     }
+
     @Test
     void updateUsingSaveMethod(){
 
@@ -63,21 +64,21 @@ class ProductRepositoryTest {
 
         // create product
         Product product = new Product();
-        product.setName("product 2");
-        product.setDescription("product 2 description");
-        product.setSku("100ABCD");
-        product.setPrice(new BigDecimal(200));
+        product.setName("product 14");
+        product.setDescription("product 14 description");
+        product.setSku("114ABCD");
+        product.setPrice(new BigDecimal(1400));
         product.setActive(true);
-        product.setImageUrl("product2.png");
+        product.setImageUrl("product14.png");
 
         // create product
         Product product3 = new Product();
-        product3.setName("product 3");
-        product3.setDescription("product 3 description");
-        product3.setSku("100ABCDE");
-        product3.setPrice(new BigDecimal(300));
+        product3.setName("product 15");
+        product3.setDescription("product 15 description");
+        product3.setSku("115ABCDE");
+        product3.setPrice(new BigDecimal(1500));
         product3.setActive(true);
-        product3.setImageUrl("product3.png");
+        product3.setImageUrl("product15.png");
 
         productRepository.saveAll(List.of(product, product3));
 
@@ -140,4 +141,3 @@ class ProductRepositoryTest {
         System.out.println(count);
     }
 }
-
